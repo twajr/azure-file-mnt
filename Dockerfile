@@ -1,20 +1,9 @@
-FROM centos:7
+FROM ubuntu:16.04
 MAINTAINER Tom Armstrong
 
-RUN yum -y update
+RUN apt-get update && apt-get install -y \
+  cifs-utils \
+  curl \
+  git 
 
-RUN yum -y install \
-    cifs-utils \
-    samba-client \
-    samba-common \
-    curl \
-    git2u \
-    net-tools \
-    python34 \
-    vim \
-    wget \
-    rsync
-
-RUN yum -y upgrade && \
-    yum clean all    
 
