@@ -5,6 +5,8 @@ RUN yum -y update
 
 RUN yum -y install \
     cifs-utils \
+    samba-client \
+    samba-common \
     curl \
     git2u \
     net-tools \
