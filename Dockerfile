@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y \
   cifs-utils \
   curl \
   git \
-  net-tools
+  net-tools \
+  tcpdump
 
 COPY ./azure-check.sh /
