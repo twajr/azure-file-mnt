@@ -4,8 +4,12 @@ MAINTAINER Tom Armstrong
 RUN apt-get update && apt-get install -y \
   cifs-utils \
   curl \
+  dnsutils \
   git \
   net-tools \
-  tcpdump
+  iputils-ping \
+  inetutils-traceroute \
+  tcpdump \ 
+  telnet
 
 COPY ./azure-check.sh /
