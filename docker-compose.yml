@@ -18,17 +18,12 @@ services:
       io.rancher.container.pull_image: always
   mount-test2:
     image: twabscs/azure-file-mnt
-    # environment:
-    #   MYSQL_DATABASE: xxx
-    #   MYSQL_PASSWORD: password
     stdin_open: true
-    # volumes:
-    # - /app/local/backup-test-mariadb/mysql:/var/lib/mysql
     tty: true
     privileged: true
     cap_add:
       - ALL
-    links:
-    - mount-test1:mnt1      
+    # links:
+    # - mount-test1:mnt1      
     labels:
       io.rancher.container.pull_image: always      
