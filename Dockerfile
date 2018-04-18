@@ -1,15 +1,18 @@
-FROM ubuntu:16.10
+FROM ubuntu:16.04
 MAINTAINER Tom Armstrong
 
 RUN apt-get update && apt-get install -y \
   cifs-utils \
   curl \
+  git 
+
+# troubleshooting tools
+RUN apt-get update && apt-get install -y \
   dnsutils \
-  git \
   net-tools \
   iputils-ping \
-  inetutils-traceroute \
   tcpdump \ 
   telnet
 
 COPY ./azure-check.sh /
+
