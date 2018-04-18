@@ -4,6 +4,7 @@ MAINTAINER Tom Armstrong
 RUN apt-get update && apt-get install -y \
   cifs-utils \
   curl \
+  duplicity \ 
   git 
 
 # troubleshooting tools
